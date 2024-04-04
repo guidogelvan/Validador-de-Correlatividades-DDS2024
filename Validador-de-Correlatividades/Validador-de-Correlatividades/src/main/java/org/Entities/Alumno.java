@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 @Getter
 @Setter
@@ -18,5 +19,9 @@ public class Alumno {
 
     public Boolean aprobo(Materia materia){
         return materiasAprobadas.contains(materia);
+    }
+
+    public void agregarMateriaAprobada(Materia... materias) {
+        materiasAprobadas.addAll(Arrays.asList(materias));
     }
 }
